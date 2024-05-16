@@ -1,4 +1,4 @@
-name: 自动同步规则仓库
+name: 自动同步Apple增强仓库
 
 on:
   schedule:
@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: halfteas/apple # 替换为你的仓库 B
-          token: ${{ secrets.SURGE_RULE_SCRIPT_UPDATE }}
+          token: ${{ secrets.SURGE_APPLE }}
 
-      - name: 拉取规则仓库并同步
+      - name: 拉取Apple增强仓库并同步
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
